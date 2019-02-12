@@ -4,7 +4,7 @@ MAINTAINER Henrik Hansson <h@rwx.nu>
 LABEL org.label-schema.name="alpine" \
         org.label-schema.vendor="Dockage" \
         org.label-schema.description="openRC + rtorrent" \
-        org.label-schema.vcs-url="https://github.com/dockage/alpine" \
+        org.label-schema.vcs-url="https://github.com/dockage/alpine"
 
 COPY rtorrent.service /etc/init.d/rtorrent.service
 COPY .rtorrent.rc /root/.rtorrent.rc
