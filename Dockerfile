@@ -13,7 +13,7 @@ COPY startup-rtorrent.sh /root/startup-rtorrent.sh
 RUN echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories \
     && echo '@edgecommunity http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories \
     && echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
-    && apk add --no-cache openrc su-exec ca-certificates nano curl findutils rtorrent screen \
+    && apk add --no-cache openrc su-exec ca-certificates curl findutils rtorrent screen \
     # Disable getty's
     && sed -i 's/^\(tty\d\:\:\)/#\1/g' /etc/inittab \
     && sed -i \
