@@ -11,7 +11,6 @@ throttle.max_peers.seed.set = 50
 throttle.max_uploads.set = 8
 directory.default.set = /downloads
 session.path.set = /downloads/.rtorrent/session
-schedule2 = watch_directory,5,5,load_start="/downloads/.rtorrent/watch/*.torrent"
 network.port_range.set = 50000-50000
 network.port_random.set = yes
 trackers.use_udp.set = yes
