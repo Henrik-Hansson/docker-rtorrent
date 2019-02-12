@@ -6,7 +6,7 @@ LABEL org.label-schema.name="alpine" \
         org.label-schema.description="openRC + rtorrent" \
         org.label-schema.vcs-url="https://github.com/dockage/alpine" \
 
-COPY dulten /etc/init.d/dulten
+COPY rtorrent.service /etc/init.d/rtorrent.service
 COPY .rtorrent.rc /root/.rtorrent.rc
 COPY startup-rtorrent.sh /root/startup-rtorrent.sh
 
@@ -35,7 +35,7 @@ RUN apk add --no-cache openrc su-exec ca-certificates curl findutils rtorrent sc
     && sed -i 's/\tcgroup_add_service/\t#cgroup_add_service/g' /lib/rc/sh/openrc-run.sh \
     && sed -i 's/VSERVER/DOCKER/Ig' /lib/rc/sh/init.sh \
     && /root/startup-rtorrent.sh \
-    && rc-update add dulten default
+    && rc-update add rtorrent.service default
 
 EXPOSE 50000 5000
 VOLUME /downloads
