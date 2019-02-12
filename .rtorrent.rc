@@ -1,0 +1,20 @@
+scgi_port=127.0.0.1:5000
+encoding_list = UTF-8
+log.open_file = "rtorrent.log", "/downloads/.log/rtorrent/rtorrent.log"
+log.add_output = "info", "rtorrent.log"
+log.add_output = "critical", "rtorrent.log"
+log.add_output = "error", "rtorrent.log"
+throttle.min_peers.normal.set = 40
+throttle.max_peers.normal.set = 50
+throttle.min_peers.seed.set = 10
+throttle.max_peers.seed.set = 50
+throttle.max_uploads.set = 8
+directory.default.set = /downloads
+session.path.set = /downloads/.rtorrent/session
+schedule2 = watch_directory,5,5,load_start="/downloads/.rtorrent/watch/*.torrent"
+network.port_range.set = 50000-50000
+network.port_random.set = yes
+trackers.use_udp.set = yes
+dht.mode.set = disable
+dht.port.set=6881
+protocol.pex.set = yes
