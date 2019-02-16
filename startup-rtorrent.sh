@@ -12,10 +12,12 @@ if [ $? != 0 ]; then
   addgroup -g $RT_GID rtorrent
 fi
 
-useradd -u $RT_UID -g $RT_GID -d /home/rtorrent -m -s /bin/bash rtorrent
-if [ $? != 0 ]; then
-  adduser -u $RT_UID -G rtorrent -h /home/rtorrent -D -s /bin/ash rtorrent
-fi
+#useradd -u $RT_UID -g $RT_GID -d /home/rtorrent -m -s /bin/bash rtorrent
+#if [ $? != 0 ]; then
+#  adduser -u $RT_UID -G rtorrent -h /home/rtorrent -D -s /bin/ash rtorrent
+#fi
+
+adduser -u $RT_UID -G rtorrent -h /home/rtorrent -D -s /bin/ash rtorrent
 
 # arrange dirs and configs
 mkdir -p /downloads/.rtorrent/session

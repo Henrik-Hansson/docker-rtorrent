@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:latest
 MAINTAINER Henrik Hansson <h@rwx.nu>
 
 LABEL org.label-schema.name="alpine" \
@@ -37,7 +37,7 @@ RUN apk add --no-cache openrc su-exec ca-certificates curl findutils rtorrent sc
     && /root/startup-rtorrent.sh \
     && rc-update add rtorrent.service default
 
-EXPOSE 50000 5000
+EXPOSE 50001 5001
 VOLUME /downloads
 
 WORKDIR /etc/init.d

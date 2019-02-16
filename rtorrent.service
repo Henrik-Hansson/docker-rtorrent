@@ -9,10 +9,9 @@
 # This file may not be copied, modified, propagated, or distributed
 # except according to the terms contained in the LICENSE file.
 
-description="Set the dmesg level for a cleaner boot"
+description="rtorrent"
 
 start()
 {
   screen -D -m -S rtorrent /usr/bin/rtorrent -n -o import=/downloads/.rtorrent/.rtorrent.rc
 }
-

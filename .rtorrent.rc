@@ -1,4 +1,4 @@
-scgi_port=127.0.0.1:5000
+scgi_port=0.0.0.0:5001
 encoding_list = UTF-8
 log.open_file = "rtorrent.log", "/downloads/.log/rtorrent/rtorrent.log"
 log.add_output = "info", "rtorrent.log"
@@ -11,8 +11,8 @@ throttle.max_peers.seed.set = 50
 throttle.max_uploads.set = 8
 directory.default.set = /downloads
 session.path.set = /downloads/.rtorrent/session
-network.port_range.set = 50000-50000
-network.port_random.set = yes
+network.port_range.set = 50001-50001
+network.port_random.set = no
 trackers.use_udp.set = yes
 dht.mode.set = disable
 dht.port.set=6881
