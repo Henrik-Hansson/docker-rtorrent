@@ -13,5 +13,5 @@ description="rtorrent"
 
 start()
 {
-  screen -D -m -S rtorrent /usr/bin/rtorrent -n -o import=/downloads/.rtorrent/.rtorrent.rc
+  screen -D -m -S rtorrent /usr/bin/rtorrent -n -o import=/home/rtorrent/.rtorrent/.rtorrent.rc
 }
