@@ -15,6 +15,9 @@ fi
 adduser -u $RT_UID -G rtorrent -h /home/rtorrent -D -s /bin/ash rtorrent
 
 # arrange dirs and configs
+mkdir -p /home/rtorrent/.rtorrent/downloads
+mkdir -p /home/rtorrent/.rtorrent/completed
+mkdir -p /home/rtorrent/.rtorrent/log
 mkdir -p /home/rtorrent/.rtorrent/session
 mkdir -p /home/rtorrent/.rtorrent/watch
 if [ ! -e /home/rtorrent/.rtorrent/.rtorrent.rc ]; then
